@@ -1,0 +1,81 @@
+// 定义常量
+@htmlFontSize: 100px;
+@bodyFontSize: 16px;
+@white: #fdfefd;
+@greenColor:#00a65a;
+// 修改插件颜色
+.login,.register{
+    .el-tabs__item:hover{
+        color: @greenColor;
+    }
+    .el-tabs__active-bar{
+        background-color: @greenColor;
+    }
+    .el-tabs__item.is-active {
+        color: @greenColor;
+    }
+    .el-input.is-active .el-input__inner, .el-input__inner:focus{
+        border-color:@greenColor;
+    }
+}
+// 修改element组件样式
+.el-tabs__content{
+    // 修改tabs卡片内容横向内容被隐藏
+    overflow: scroll;
+}
+.el-form-item{
+    margin-bottom: 0;
+}
+.el-form-item__error{
+    padding-top:0;
+    margin-top:-0.05rem;
+}
+html {
+    height: 100%;
+    font-size: @htmlFontSize;
+    body {
+        height: 100%;
+        font-size: @bodyFontSize;
+        min-width: 900px;
+        overflow: scroll;
+        color:#555;
+        .left{
+        float: left;
+        }
+        .right{
+            float: right;
+        }
+        .clear::after{
+        content: ' ';
+        display: block;
+        clear: both;
+        zoom: 1;
+        }
+
+        .header {
+            .el-dropdown {
+                // 设置下拉框样式
+                display: inline;
+                .el-dropdown-link {
+                    color: @white;
+                }
+            }
+        }
+        .wrap{
+            .layout {
+                // 设置router-view的布局
+                padding: 5px 20px;
+                nav {
+                    padding: 20px 0;
+                    i {
+                        padding-right: 5px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .register-box,.login-box,.forget-pwd-box{
+            z-index: 9999;
+        }
+    }
+}
