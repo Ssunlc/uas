@@ -1,4 +1,4 @@
-# upms
+# uas
 
 > A Vue.js project
 
